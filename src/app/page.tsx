@@ -30,7 +30,7 @@ export default function Home() {
         var url =
           "https://newsapi.org/v2/top-headlines?" +
           "country=us&" +
-          "apiKey=885e08a7737f481c93ad3e8ba71b6c7e";
+          "apiKey=" + process.env.NEXT_PUBLIC_NEWS_API_KEY;
 
         const res = await (await fetch(url)).json();
         console.log(res);
